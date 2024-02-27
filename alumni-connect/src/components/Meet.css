@@ -1,0 +1,158 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+.uppernavbar {
+    background-color: #ffffff;
+    height: 100px;
+    padding: 0 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.logo {
+    color: rgb(42, 124, 111);
+    font-size: 2.5rem;
+    padding-right: 38rem;
+}
+
+.login {
+    height: 30px;
+    width: 30px;
+    margin-left: 1rem;
+    margin-right: 0rem;
+}
+
+.searchbar {
+    position: relative;
+}
+
+.searchbar input[type="text"] {
+    border: 1px solid rgb(42, 124, 111);
+    padding: 10px 20px;
+    padding-right: 40px;
+    outline: none;
+    /* border-radius: 4px; */
+    /* Adjust as needed */
+}
+
+::placeholder{
+    font-family: 'Times New Roman', Times, serif;
+    align-items: last baseline;
+    /* background: thistle; */
+}
+
+.searchbar img {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    /* Adjust as needed */
+    transform: translateY(-50%);
+}
+
+.mainnav {
+    display: flex;
+    color: #fff;
+    background-color: rgb(42, 124, 111);
+    align-items:center;
+    list-style: none;
+    gap: 20px;
+    padding: 0rem 6rem;
+    height: 2.4rem;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.link{
+    padding-left: 40rem;
+}
+
+.color {
+    text-decoration: none;
+    color: #fff;
+}
+
+li :hover{
+    opacity: 0.7;
+
+}
+
+.meet{
+    margin-top: 13;
+    margin-bottom: 5rem;
+}
+
+.heading{
+    color: rgb(42, 124, 111);
+    text-align: center;
+    font-size: 40px;
+    margin: 14rem auto;
+    margin-bottom: 5rem;
+}
+
+.meeting, .counselling, .referal{
+    display: inline;
+    width: 292px;
+    height: 468px;
+    border: 1px solid rgb(42, 124, 111);
+
+    
+}
+
+ul{
+    list-style-type: none;
+}
+
+.reference_photo{
+    width: 290px;
+    height: 195px;
+    /* aspect-ratio: auto; */
+}
+
+.description{
+    font-size: 26px;
+    padding-bottom: 2rem;
+}
+
+.list{
+    padding-top: 1.5rem;
+    font-size: large;
+    line-height: 2rem;
+}
+
+.action{
+    margin: 1.3rem auto;
+    padding: 0.7rem 1.2rem;
+    color:#fff;
+    background-color: rgb(42, 124, 111);
+    border-style: hidden;
+    font-size: 1rem;
+}
+
+.info{
+    color: rgb(42, 124, 111);
+    width: 250px;
+    height: 210px;
+    padding: 33px 31px;
+
+}
+
+.services{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+

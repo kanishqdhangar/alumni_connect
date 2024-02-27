@@ -7,10 +7,13 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 // import axios from "axios";
 import axios from "axios";
 import "./Signup.css";
+import Navbar from './Navigation';
+import Footer from './Footer';
+import Homes from './Home';
 
 // import emailjs from "@emailjs/browser";
 
-export default function Signup() {
+function Signup() {
 const [username,setusername]=useState("");
 const [email,setemail]=useState("");
 const [phone,setPhone]=useState("");
@@ -139,7 +142,7 @@ const handleSubmit = async (e) => {
           value={semester}
           onChange={(e)=>{setsemester(e.target.value)}}
           required
-           placeholder="Semester" />
+           placeholder="Academic Year 20XX-XX" />
         </div>
         {/* <div className="remember-forgot">
           <label>
@@ -162,3 +165,15 @@ const handleSubmit = async (e) => {
     </div>
   );
 }
+
+export function Apps() {
+  return (
+    <>
+      <Navbar />
+      <Signup />
+      <Footer />
+    </>
+  );
+}
+
+export default Apps;

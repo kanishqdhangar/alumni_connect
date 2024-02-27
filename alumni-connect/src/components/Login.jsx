@@ -4,6 +4,8 @@ import { FaLock } from "react-icons/fa";
 import { MdOutgoingMail } from "react-icons/md";
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import axios from "axios";
+import Navbar from './Navigation';
+import Footer from './Footer';
 
 
 
@@ -30,12 +32,14 @@ export default function Signup() {
     setpassword("");
   }
   return (
+    <>
+    <Navbar />
     <div className='wraper'>
       <form method="GET" onSubmit={onsubmit} className='reg-form'>
         <h1>Login Form</h1>
         <div className='profile'>
 
-          <AccountCircleIcon style={{ fontSize: '6rem', background: 'linear-gradient(red, yellow)', borderRadius: "70px" }} />
+          <AccountCircleIcon style={{ fontSize: '6rem', background: 'linear-gradient(green, white)', borderRadius: "70px" }} />
 
         </div>
         <div className='input-box'>
@@ -56,7 +60,7 @@ export default function Signup() {
             onChange={(e) => setpassword(e.target.value)} placeholder="password" />
           <FaLock className='register-icon' />
         </div>
-        <div className='remember-forgot'>
+        {/* <div className='remember-forgot'>
           <label>
             <input type='checkbox' />
             Remember me
@@ -65,16 +69,19 @@ export default function Signup() {
         </div>
         <button type="submit" className="submit-button">
           Login
-        </button>
+        </button> */}
         <div className='login-link'>
           <p>Don't have an account?</p>
           <Link to="/signup" >Register</Link>
         </div>
-        <div className="login-link">
+        {/* <div className="login-link">
           <p>Are you an admin?</p>
           <Link to="/admin">Admin Login</Link>
-        </div>
+        </div> */}
       </form>
     </div>
+    <Footer />
+    </>
+
   );
 }

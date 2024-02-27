@@ -1,109 +1,132 @@
 import React, { useState } from 'react';
-import "./Home.css"
-import instaIcon from "./instaIcon.png"
+import { MdFunctions } from 'react-icons/md';
+import './Home.css'; // Import your CSS file
 import login from "./login.jpeg";
-import chatIcon from "./chat_icon.png";
 import { Link } from "react-router-dom";
-import { FiAlignRight, FiX } from "react-icons/fi";
+import socialHandle from "./socialHandle.png";
+import grp1 from "./grpPhoto1.webp";
+import grp2 from "./grpPhoto2.webp";
+import grp3 from "./grpPhoto3.webp";
+import grp4 from "./grpPhoto4.webp";
+import chatIcon from "./chat_icon.png";
+// import Navbar from './Navigation';
+import Footer from './Footer';
+import logo from './Logo.png';
 
- function Navbar() {
-  const [clicked, setClicked] = useState(false);
-  return (
-    <div className="nav">
-      <div className="uppernavbar">
-        <div className="logo"><Link to="/">AlumniConnect</Link></div>
-        <div className="searchbar">
-          <input type="text" name="searchbar" maxLength="100" placeholder="Search here..." value="" />
-          <img height="30" width="30" src="https://cdn-icons-png.flaticon.com/128/2811/2811806.png" alt="Search Icon" />
+function Navbar() {
+    const [clicked, setClicked] = useState(false);
+    return (
+      <div className="nav">
+        <div className="uppernavbar">
+          <div className="logo"><Link to="/"><img src={logo}></img></Link></div>
+          <div className="searchbar">
+            <input type="text" name="searchbar" maxLength="100" placeholder="Search here..." value="" />
+            <img height="30" width="30" src="https://cdn-icons-png.flaticon.com/128/2811/2811806.png" alt="Search Icon" />
+          </div>
+          <div><Link to="/signup"><img className="login" src={login} alt="Login" /></Link></div>
+          <div className="dropdown">
+            {/* Add your dropdown content here */}
+          </div>
         </div>
-        <div><Link to="/signup"><img className="login" src={login} alt="Login" /></Link></div>
-        <div className="dropdown">
-          {/* Add your dropdown content here */}
-        </div>
+        <ul className={`nav-list ${clicked ? 'active' : 'navlist'}`}>
+          {/* <li><Link to="/">Home</Link></li> */}
+          <li><Link to="/groups">Groups</Link></li>
+          <li><Link to="/meet">Meet</Link></li>
+          {/* <li><a className="color" href="forums/">Forums</a></li> */}
+          <li><Link to="/FAQ">FAQ</Link></li>
+          {/* <li><a className="color" href="Members/">Members</a></li> */}
+          {/* <li><a className="color" href="contact/">Help</a></li> */}
+          <li><Link to="/alumnus">Alumnus</Link></li>
+          <li><Link to="/about">About</Link></li>
+          {/* <li><a className="link" href="socialMediaHandle.com"><img src="socialHandle.png" alt="Social Handle" /></a></li> */}
+        </ul>
+        {/* <div className="mobile">
+            <i id="bar" onClick={() => setClicked(!clicked)}>
+              {clicked ? <FiX /> : <FiAlignRight />}
+            </i>
+        </div> */}
       </div>
-      <ul className={`nav-list ${clicked ? 'active' : 'navlist'}`}>
-        {/* <li><Link to="/">Home</Link></li> */}
-        <li><Link to="/groups">Groups</Link></li>
-        <li><Link to="/bookonline">Book Online</Link></li>
-        <li><a className="color" href="forums/">Forums</a></li>
-        <li><a className="color" href="FAQs/">FAQs</a></li>
-        {/* <li><a className="color" href="Members/">Members</a></li> */}
-        <li><a className="color" href="contact/">Help</a></li>
-        <li><a className="color" href="about/">Alumni</a></li>
-        {/* <li><a className="link" href="socialMediaHandle.com"><img src="socialHandle.png" alt="Social Handle" /></a></li> */}
-      </ul>
-      <div className="mobile">
-          <i id="bar" onClick={() => setClicked(!clicked)}>
-            {clicked ? <FiX /> : <FiAlignRight />}
-          </i>
-      </div>
+    );
+  }
+
+
+const ExploreSection = () => (
+  <section className="explore">
+    <p className="heading_explore">EXPLORE ALUMNICONNECT</p>
+    <p className="description">Join the Discussion</p>
+  </section>
+);
+
+const NewsSection = () => (
+  <section className="news">
+    <p className="capital">IN THE NEWS</p>
+    <p className="lower">What You Need to Know</p>
+  </section>
+);
+
+const PhotosSection = () => (
+  <section className="photos">
+    <div className="event1">
+      <img className="event" src={grp1} alt="event 1" />
+      <div className="photo1">Meeting Of Batch 2024</div>
     </div>
-  );
-}
-
- function MainContent() {
-  return (
-    <main className="container">
-      <span className="content">
-        <div className="about">
-          <p>ABOUT OUR TECHNOLOGY <br /> COMMUNITY</p>
-        </div>
-        <div className="techies"><p>A Place for Techies</p></div>
-        <div className="about_tech">
-          From the beginning, AlumniConnect has been driven by the interests and involvement of our incredible community of passionate fans. We are focused on improving our collection of content and enhancing our online platform. We are a great source for tech support, offering opportunities for users to be active in a variety of topics and to engage with each other in an interesting and safe online environment.
-        </div>
-        <div className="guidelines">GUIDELINES</div>
-        <div className="good"><p>Good to know</p></div>
-      </span>
-    </main>
-  );
-}
-
- function ImageSection() {
-  return (
-    <div className="images">
-      <span className="image_container">
-        <img src="https://static.wixstatic.com/media/547500af64d34b988bac05991a5fce61.jpg/v1/fill/w_970,h_600,fp_0.50_0.50,q_85,usm_0.66_1.00_0.01,enc_auto/547500af64d34b988bac05991a5fce61.jpg" alt="Playing on Tablet" width="326" height="480" fetchpriority="high" />
-        <div className="image_content">
-          <p className="guide">NO SPAMMING</p>
-        </div>
-      </span>
-      <span className="image_container">
-            <img src="https://static.wixstatic.com/media/f19660f6c6e0436e9d2f00362db46eef.jpg/v1/fill/w_973,h_600,fp_0.50_0.50,q_85,usm_0.66_1.00_0.01,enc_auto/f19660f6c6e0436e9d2f00362db46eef.jpg" alt="Student in Library" width="327" height="480" fetchpriority="high" />
-            <div className="image_content">
-                <p className="guide">NO HOSTILITY</p>
-            </div>
-        </span>
-        <span className="image_container">
-            <img src="https://static.wixstatic.com/media/a00e7791c7984675a5c2439fdf4a37c6.jpg/v1/fill/w_973,h_600,fp_0.50_0.50,q_85,usm_0.66_1.00_0.01,enc_auto/a00e7791c7984675a5c2439fdf4a37c6.jpg" alt="Modern Digital Watch" width="327" height="480" fetchpriority="high" />
-            <div className="image_content">
-                <p className="guide">NO ILLEGAL CONTENT</p>
-            </div>
-        </span>
-      {/* Add other image containers */}
+    <div className="event2">
+      <img className="event" src={grp2} alt="event 2" />
+      <div className="photo2">Winning National Science Day Award</div>
     </div>
-  );
-}
+    <div className="event3">
+      <img className="event" src={grp3} alt="event 3" />
+      <div className="photo3">H.C.Verma</div>
+    </div>
+  </section>
+);
 
- function Footer() {
-  return (
-    <footer className="footer">
-      <p className="head">AlumniConnect <a href="socialMediaHandle.com"><img src= {instaIcon} alt="Instagram Icon" /></a></p>
-      <p className="last"> AlumniConnect Proudly created by ByteCode Learners</p>
-      <button className="chat" name="chatbox"><img className="chat_icon" src={chatIcon} alt="Chat Icon" /> <h2>Let's Chat!</h2></button>
-    </footer>
-  );
-}
+const AboutSection = () => (
+  <div className="about">
+    <aside id="aboutConnect">
+      <p className="aboutHead">About AlumniConnect</p>
+      <p className="aboutPara">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias accusamus mollitia temporibus impedit nisi minima nihil est illum in aspernatur minus, exercitationem sit tenetur.eius fugiat laboriosam ipsa totam! Blanditiis modi mollitia voluptatum numquam similique sapiente autem eaque! Reprehenderit sint natus nesciunt numquam sed, laborum ipsam ad unde nemo non, hic minima corrupti vitae architecto eveniet ut rerum excepturi est, repellat accusantium nostrum earum? Velit magnam neque veniam non facilis. Facilis enim exercitationem sapiente a perspiciatis.</p>
+    </aside>
+  </div>
+);
 
-export function Apps() {
-  return (
-    <>
-      <Navbar />
-      <MainContent />
-      <ImageSection />
-      <Footer />
-    </>
-  );
-}
+const EducationSection = () => (
+  <div className="education">
+    <p className="educationHead">Education</p>
+  </div>
+);
 
-export default Apps;
+const VisionSection = () => (
+  <section className="vision">
+    <article>
+      <p className="articleHead">Give your dreams a vision</p>
+      AlumniConnect is the ultimate platform for alumni seeking to reconnect and engage with our thriving community. Our website serves as a central hub, facilitating connections between past and present students. Explore the Alumni Directory to rediscover old friends, stay informed about upcoming events, and build lasting connections that transcend time and distance. Join us in fostering a sense of community and shared experiences, where the journey continues long after graduation. Welcome to AlumniConnect, where connections are made and memories endure.
+    </article>
+    <div className="image">
+      <img className="event4" src={grp4} alt="event 4" />
+    </div>
+  </section>
+);
+
+
+
+export function AppsHome() {
+    return (
+      <>
+      <div className='home'>
+        <Navbar />
+        <ExploreSection/>
+        <NewsSection/>
+        <PhotosSection/>
+        <AboutSection/>
+        <EducationSection/>
+        <VisionSection/>
+        {/* <ImageSection /> */}
+        <Footer />
+        </div>
+      </>
+    );
+  }
+  
+  export default AppsHome;
+  

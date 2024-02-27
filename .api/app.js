@@ -5,6 +5,7 @@ const bcrypt = require("bcryptjs");
 const cors = require("cors");
 require("./connection")
 const StudentData = require("./student-data");
+const AlumniData = require("./alumni-data");
 // const { accountSid, authToken, twilioPhoneNumber } = process.env;
 // const client = require("twilio")(accountSid, authToken);
 
@@ -51,12 +52,27 @@ app.post("/login", async (req, res) => {
     }
 });
 
-// app.get("/register", async (req, res) => {
-//     try {
-//         const cuh_members = await StudentData.find();
-//         res.status(200).send(cuh_members);
-//         console.log(cuh_members); 
-//     } catch (e) {
-//         res.status(400).end(e);
-//     }
-// })
+app.get("/alumnus", async (req, res) => {
+    try {
+        console.log("hi");
+        const cuh_members = await AlumniData.find();
+        res.status(200).send(cuh_members);
+        console.log(cuh_members); 
+    } catch (e) {
+        res.status(400).send(e);
+        console.log("hello");
+    }
+})
+
+app.post("/alumnus", async (req, res) => {
+    try {
+        const { name, email, phone, qualifications, currentworkplace, jobTitle, achivementResearch } = req.body;
+        // const hashedPass = await bcrypt.hash(password, 10);
+        const alumniData = new AlumniData({ name, email, phone, qualifications, currentworkplace, jobTitle, achivementResearch });
+        const doc = await alumniData.save();
+        res.status(200).send(doc);
+    } catch (error) {
+        console.error("Error in registration:", error);
+        res.status(500).json({ error: "Failed to register user" });
+    }
+});

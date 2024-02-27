@@ -1,0 +1,253 @@
+main{
+    margin-top: 167px;
+}
+
+
+.groups--h1{ 
+    margin-left: 13.8rem;
+    color: rgb(1, 114, 114);
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+    padding-top: 0;
+    width: 90%;
+    margin: 3rem 6rem;
+    margin-top: 0;
+  }
+
+  .join-head{
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  #joinbutton{
+    margin-left: 4rem;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.3rem;
+    color: white;
+    border: rgb(42, 124, 111) solid 0.1px;
+    background-color: rgb(42, 124, 111);
+    cursor: pointer;
+    height: 2.3rem;
+    width: 6rem;
+}
+
+  .firstcontainer {
+    
+    width: 50%;
+    background: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    border: rgb(1, 114, 114) solid 0.1px;
+    color: rgb(1, 114, 114);
+  } 
+  
+ .chat-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 5px;
+    padding: 15px;
+    font-size: 22px;
+    color: rgb(42, 124, 111);
+  }
+  
+#verifyicon{
+    margin-left: -3px;
+    font-size: 18px;
+}
+
+.alertbuttonicon{
+    font-size: 10px;
+}
+  
+.share-button {
+    margin-left: auto;
+    height: 35px;
+    width: 35px;
+    border: none;
+    color: rgb(0, 0, 0);
+    background-color: white;
+    display: inline-block;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.share-button:hover {
+    color: rgb(42, 124, 111);
+}
+
+  .reactionbutton{
+    height: 37px;
+    width: 37px;
+    padding: 10px;
+    margin: 5px;
+    background-color:white;
+  } 
+
+  .counts{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+    }
+
+#reactioncounts{
+    margin-left: -1rem;
+}
+    
+  .inputbox{
+    margin-left: 1.3rem;
+  }
+
+  .inputbox1{
+    height: 40px;
+    width: 90%;
+  }
+  .chat-content {
+    padding: 1rem;
+    font-size: 20px;
+    margin-bottom: 1rem;
+  }
+  
+  .chat-reactions {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    
+  }
+  
+  .chat-reactions button {
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    border: none;
+    cursor: pointer;
+   
+  }
+  .commentbutton{
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .chat-input{
+    display: flex;
+    justify-content: space-between;
+    width: 20%;
+    margin-top: 1.5rem;
+    margin-left: 2rem;
+  }
+  .container2 {
+    width: 22rem;
+    background: #fff;
+    padding: 20px;
+    margin-left: -5rem;
+    height: 20rem;
+    box-sizing: border-box;
+    border:rgb(42, 124, 111) solid 0.1px;
+  }
+
+  .post {
+    display: flex;
+    align-items: center;
+}
+
+.profile-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: grey;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+.username {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+#searchBox{
+   height: 2.5rem;
+   width: 90%;
+   margin-left: 1rem;
+   margin-bottom: 1.5rem;
+}
+
+#suggestedGroups{
+    font-size: 100%;
+    margin-left: 1rem;
+    color: rgb(42, 124, 111);
+}
+
+#groupname{
+    font-size: 18 px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+
+.group {
+    margin-top: 1.5rem;
+    border: 1px solid #ccc;
+    text-align: center;
+    padding: 12px;
+    margin-bottom: 10px;
+    width: 17.5rem;
+}
+
+#groupname{
+    font-size: 1.5rem;
+}
+
+#groupprofile {
+    width: 2rem;
+}
+
+#addgroupicon{
+   margin-top: -1rem;
+   margin-left: 12rem;
+   border: none;
+   background-color: white;
+   width: 3rem;
+}
+
+.group--foot{
+    font-size: 1rem;
+    font-size: large;
+}
+
+.container3{
+    border: rgb(42, 124, 111) solid 0.1px;
+    margin: 2.5rem 13.6rem;
+    margin-right: 40.5rem;
+    height: 5rem;
+    display: flex;
+    justify-content:space-around;
+    color: rgb(42, 124, 111);
+}
+
+.create--head{
+    margin-top: 1rem;
+    font-size: 2rem;
+}
+
+.create{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    width: 7rem;
+    font-size: 1.5rem;
+    font-family: 'Times New Roman', Times, serif;
+    color: #fff;
+    background-color: rgb(42, 124, 111);
+    border: none;
+}
