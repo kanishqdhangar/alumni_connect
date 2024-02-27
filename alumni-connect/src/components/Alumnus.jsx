@@ -3,13 +3,14 @@ import axios from 'axios';
 import './Alumnus.css';
 import Navbar from './Navigation';
 import Footer from './Footer';
+import {Baseurl} from "./Baseurl"
 
 const AlumniList = () => {
   const [alumniList, setAlumniList] = useState([]);
 
   useEffect(() => {
     // Fetch alumni data from backend API
-    axios.get('http://localhost:7000/alumnus')
+    axios.get(`${Baseurl}/alumnus`)
       .then(response => {
         setAlumniList(response.data);
       })

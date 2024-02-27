@@ -85,7 +85,7 @@ const AboutSection = () => (
   <div className="about">
     <aside id="aboutConnect">
       <p className="aboutHead">About AlumniConnect</p>
-      <p className="aboutPara">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias accusamus mollitia temporibus impedit nisi minima nihil est illum in aspernatur minus, exercitationem sit tenetur.eius fugiat laboriosam ipsa totam! Blanditiis modi mollitia voluptatum numquam similique sapiente autem eaque! Reprehenderit sint natus nesciunt numquam sed, laborum ipsam ad unde nemo non, hic minima corrupti vitae architecto eveniet ut rerum excepturi est, repellat accusantium nostrum earum? Velit magnam neque veniam non facilis. Facilis enim exercitationem sapiente a perspiciatis.</p>
+      <p className="aboutPara">Alumni Connect is an innovative and dynamic educational platform that fosters meaningful connections between alumni and their alma mater. This platform serves as a bridge between past and present, providing a space for alumni to engage with current students, share valuable insights, and contribute to the continuous growth of their educational institution. Through Alumni Connect, former students can offer mentorship, career advice, and networking opportunities, creating a vibrant community that transcends graduation. This initiative not only strengthens the bond between alumni and the institution but also enriches the educational experience for current students by exposing them to a diverse range of perspectives and real-world insights. By facilitating these connections, Alumni Connect becomes an invaluable resource for lifelong learning, professional development, and the cultivation of a strong and supportive educational community.</p>
     </aside>
   </div>
 );
