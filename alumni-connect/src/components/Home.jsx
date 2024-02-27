@@ -93,6 +93,10 @@ const AboutSection = () => (
 const EducationSection = () => (
   <div className="education">
     <p className="educationHead">Education</p>
+    <p className="educationcontent">Alumni Connect serves as a robust platform that facilitates ongoing education and knowledge exchange within the alumni community. Through this platform, alumni have the opportunity to engage in various educational activities that contribute to their professional and personal development. Workshops, webinars, and online courses hosted by fellow alumni or industry experts allow for the sharing of expertise and insights across different fields.
+
+Moreover, Alumni Connect provides a space for collaborative projects and research initiatives. Alumni can collaborate on educational initiatives, contribute to ongoing research, or mentor students in specialized areas. This not only enhances the learning experience for both alumni and current students but also promotes a culture of continuous education within the alumni community.
+</p>
   </div>
 );
 
